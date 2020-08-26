@@ -1,0 +1,41 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "connected-react-router": "^6.3.2",
+    "history": "^4.9.0",
+    "loose-envify": "^1.4.0",
+    "object-assign": "^4.1.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.8.4",
+    "react-injection": "^1.2.3",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.8",
+    "react-wechat-api": "^0.1.2",
+    "redux": "^4.0.1",
+    "typeit": "^6.0.2",
+    "weixin-js-sdk": "^1.4.0-test",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "aws s3 sync --acl public-read --delete build/ s3://join.cssapsu.cn",
+    "create-invalidation": "aws cloudfront create-invalidation --distribution-id EH4BKTFXLY8V8 --paths \"/index.html\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
